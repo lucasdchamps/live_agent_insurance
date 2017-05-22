@@ -11,7 +11,7 @@ function startChat() {
     return;
   }
 
-  liveagent.startChatWithWindow('5730Y000000Xd3y', 'myiframe');
+  liveagent.startChatWith('5730Y000000Xd3y');
   chatOpened = true;
 }
 </script>
@@ -25,24 +25,12 @@ html {
   background-size: cover;
 }
 
-#myiframe {
-  height: 400px;
-  position: fixed;
-  right: 30px;
-  bottom: 125px;
-  z-index: 1;
-  background-color: white;
-}
-
 #liveagent_button_online_5730Y000000Xd3y {
   position: fixed;
-  right: -15px;
-  bottom: 10px;
+  right: 0px;
+  bottom: 200px;
 }
 </style>
-
-<iframe id='myiframe' name="myiframe" style="display: none;">
-</iframe>
 
 <a id="liveagent_button_online_5730Y000000Xd3y" href="javascript://Chat" style="display: none;" onclick="startChat()">
   <%= image_tag "salesforce.png" %>
