@@ -4,14 +4,8 @@ liveagent.init('https://d.la1-c2-par.salesforceliveagent.com/chat', '5720Y000000
 chatOpened = false;
 
 function startChat() {
-  var div = document.getElementById('myiframe');
-  div.style.display = (div.style.display === "none") ? "block" : "none";
-
-  if (chatOpened) {
-    return;
-  }
-
-  liveagent.startChatWithWindow('5730Y000000Xd5C', 'myiframe');
+  if (chatOpened) return;
+  liveagent.startChat('5730Y000000Xd5C');
   chatOpened = true;
 }
 </script>
@@ -19,19 +13,10 @@ function startChat() {
 <style>
 html, body, #content { height: 100%; }
 
-#myiframe {
-  height: 400px;
-  position: fixed;
-  right: 30px;
-  bottom: 95px;
-  z-index: 1;
-  background-color: white;
-}
-
 #liveagent_button_online_5730Y000000Xd5C {
   position: fixed;
-  right: 30px;
-  bottom: 40px;
+  right: 0px;
+  bottom: 35px;
 }
 
 @media screen and (max-width: 992px) {
